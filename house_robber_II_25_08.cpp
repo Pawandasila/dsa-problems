@@ -9,11 +9,11 @@ int t[101];
 
 // int rob(vector<int> &v, int i, int n){
 
-//     // recursion 
+//     // recursion
 //     if (i >= n)
 //         return 0;
 
-//     // memoizeing it 
+//     // memoizeing it
 //     if(t[i]!= -1) return t[i];
 
 //     int loot_house = v[i] + rob(v, i + 2, n);
@@ -27,14 +27,14 @@ int t[101];
 //     return t[i] = max(skip_house, loot_house);
 // }
 
-// bottom-up approach 
-int FindMaxSum(vector<int>& arr, int n)
+// bottom-up approach
+int FindMaxSum(vector<int> &arr, int n)
 {
-    vector<int> t;
+    vector<int> t(n+1,0);
     t[0] = 0;
     t[1] = arr[0];
 
-    for (int i = 2; i <= n; i++)
+    for (int i = 2; i <= n ; i++)
     {
         int skip = t[i - 1];
         int steal = t[i - 2] + arr[i - 1];
@@ -50,9 +50,9 @@ int main()
     vector<int> house = {1, 2, 3, 1};
     int n = house.size();
     cout << "1,2,3,1";
-    memset(t , -1 , sizeof(t));
+    memset(t, -1, sizeof(t));
     // cout << rob(house, 0, n) << endl;
-    cout << FindMaxSum(house , n) << endl;
+    cout << FindMaxSum(house, n) << endl;
 
     return 0;
 }
