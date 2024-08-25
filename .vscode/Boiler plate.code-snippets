@@ -1,0 +1,21 @@
+{
+	"boiler plate": {
+		"scope": "cpp",
+		"prefix": "cppboiler",
+		"body": [
+			"#include <iostream>", 
+			"#include <vector>", 
+			"#include <string>", 
+			"#include <algorithm>",
+			"",
+			"using namespace std;",
+			"",
+			"int main() {",
+			"\t// Your code goes here",
+			"\t",
+			"\treturn 0;",
+			"}"
+		],
+		"description": "A basic C++ boilerplate with common includes and main function template"
+	}
+}
